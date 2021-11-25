@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="./" id="logo">
+        <img src="./images/logo.svg" alt="Logo">
+      </a>
+  
+      <ul>
+        <button id="close">
+          <img src="./images/icon-close.svg" alt="">
+        </button>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Careers</a>
+        </li>
+        <li>
+          <a href="#">Events</a>
+        </li>
+        <li>
+          <a href="#">Products</a>
+        </li>
+        <li>
+          <a href="#">Support</a>
+        </li>
+      </ul>
+  
+      <button id="menu">
+        <img src="./images/icon-hamburger.svg">
+      </button>
+    </nav>
+    <div class="intro">
+      <div class="statement">
+        <h1>Immersive experiences that deliver</h1>
+      </div>
+    </div>
+  </header>
+
+  <section id="interactive">
+    <figure>
+      <img class="mobile" src="./images/mobile/image-interactive.jpg" alt="">
+      <img class="desktop" src="./images/desktop/image-interactive.jpg" alt="">
+    </figure>
+    <div class="write-up">
+      <h1>The leader in interactive VR</h1>
+      <p>
+        Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.
+      </p>
+    </div>
+  </section>
+
+  <section id="creations">
+    <h1>Our creations</h1>
+
+    <div class="card-list">
+      <!-- Deep Earth -->
+      <div class="card">
+        <figure>
+          <img src="./images/desktop/image-deep-earth.jpg" class="desktop">
+          <img src="./images/mobile/image-deep-earth.jpg" class="mobile">
+        </figure>
+        <div class="desc">
+          <h2>Deep earth</h2>
+        </div>
+      </div>
+      
+      <!-- Night Arcade -->
+      <div class="card">
+        <figure>
+          <img src="./images/desktop/image-night-arcade.jpg" class="desktop">
+          <img src="./images/mobile/image-night-arcade.jpg" class="mobile">
+        </figure>
+        <div class="desc">
+          <h2>Night arcade</h2>
+        </div>
+      </div>
+
+      <!-- Soccer team VR -->
+      <div class="card">
+        <figure>
+          <img src="./images/desktop/image-soccer-team.jpg" class="desktop">
+          <img src="./images/mobile/image-soccer-team.jpg" class="mobile">
+        </figure>
+        <div class="desc">
+          <h2>Night arcade</h2>
+        </div>
+      </div>
+      
+      <!-- The Grid -->
+      <div class="card">
+        <figure>
+          <img src="./images/desktop/image-grid.jpg" class="desktop">
+          <img src="./images/mobile/image-grid.jpg" class="mobile">
+        </figure>
+        <div class="desc">
+          <h2>The grid</h2>
+        </div>
+      </div>
+      
+      <!-- From up above VR -->
+      <div class="card">
+        <figure>
+          <img src="./images/desktop/image-from-above.jpg" class="desktop">
+          <img src="./images/mobile/image-from-above.jpg" class="mobile">
+        </figure>
+        <div class="desc">
+          <h2>From up above VR</h2>
+        </div>
+      </div>
+      
+      <!-- Pocket borealis -->
+      <div class="card">
+        <figure>
+          <img src="./images/desktop/image-pocket-borealis.jpg" class="desktop">
+          <img src="./images/mobile/image-pocket-borealis.jpg" class="mobile">
+        </figure>
+        <div class="desc">
+          <h2>Pocket borealis</h2>
+        </div>
+      </div>
+      
+      <!-- The curiosity -->
+      <div class="card">
+        <figure>
+          <img src="./images/desktop/image-curiosity.jpg" class="desktop">
+          <img src="./images/mobile/image-curiosity.jpg" class="mobile">
+        </figure>
+        <div class="desc">
+          <h2>The curiosity</h2>
+        </div>
+      </div>
+      
+      <!-- Make it fisheye -->
+      <div class="card">
+        <figure>
+          <img src="./images/desktop/image-fisheye.jpg" class="desktop">
+          <img src="./images/mobile/image-fisheye.jpg" class="mobile">
+        </figure>
+        <div class="desc">
+          <h2>Make it fisheye</h2>
+        </div>
+      </div>
+    </div>
+    <button>See All</button>
+  </section>
+  
+  <footer>
+    <div class="left">
+      <a href="./" id="logo">
+        <img src="./images/logo.svg" alt="Logo">
+      </a>
+  
+      <ul>
+        <li>About</li>
+        <li>Careers</li>
+        <li>Events</li>
+        <li>Products</li>
+        <li>Support</li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <div class="social">
+        <a href="https://fb.me">
+          <img src="./images/icon-facebook.svg" alt="">
+        </a>
+        <a href="https://twitter.com">
+          <img src="./images/icon-twitter.svg" alt="">
+        </a>
+        <a href="https://pinterest.com">
+          <img src="./images/icon-pinterest.svg" alt="">
+        </a>
+        <a href="https://instagram.com">
+          <img src="./images/icon-instagram.svg" alt="">
+        </a>
+      </div>
+  
+      <p>
+        &copy; 2021 Loopstudios. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <!-- The End -->
+  <script>
+    const menuBtn = document.querySelector('#menu');
+    const closeBtn = document.querySelector('#close');
+    const menu = document.querySelector('nav ul');
+    const navBar = document.querySelector('nav');
+
+    menuBtn.onclick = () => {
+      menu.style.left = '0px';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    closeBtn.onclick = () => {
+      menu.style.left = '-100%';
+      document.body.style.overflow = 'auto';
+    }
+
+  </script>
+</body>
+</html>

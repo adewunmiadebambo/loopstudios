@@ -1,0 +1,410 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    font-size: 15px;
+}
+
+header {
+    height: 100vh;
+    background-color: var(--black);
+    background-image: url('./images/mobile/image-hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+
+nav #logo {
+    position: relative;
+    z-index: 2;
+}
+
+nav #logo img {
+    width: 150px;
+}
+
+nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    top: 0;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    list-style: none;
+    transition: 0.5s;
+}
+
+nav ul li {
+    padding: 10px 0;
+}
+
+nav ul li a {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--white);
+    text-decoration: none;
+}
+
+nav ul #close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+nav #menu {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.intro {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.intro .statement {
+    border: 1px solid white;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.intro .statement h1 {
+    font-weight: lighter;
+    font-size: 8vw;
+}
+
+/* Interactive section styles */
+#interactive {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 100px 5%;
+}
+
+#interactive figure {
+    overflow: hidden;
+}
+
+#interactive figure img {
+    width: 100%;
+}
+
+#interactive figure img.desktop {
+    display: none;
+}
+
+#interactive figure img.mobile {
+    display: inline-block;
+}
+
+#interactive .write-up {
+    padding: 20px;
+    text-align: center;
+}
+
+#interactive .write-up h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+#interactive .write-up p {
+    font-weight: bold;
+    color: var(--very-dark-gray);
+}
+
+/* Creations Section styles */
+#creations {
+    padding: 10px 5%;
+}
+
+#creations h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    color: var(--very-dark-gray);
+}
+
+#creations .card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#creations .card-list .card {
+    position: relative;
+}
+
+#creations .card-list .card figure {
+    width: 100%;
+    height: 100%;
+}
+
+#creations .card-list .card figure img {
+    width: 100%;
+    height: 100%;
+}
+
+#creations .card-list .card figure img.desktop {
+    display: none;
+}
+
+#creations .card-list .card figure img.mobile {
+    display: inline-block;
+}
+
+#creations .card-list .card .desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0005;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+#creations .card-list .card .desc h2 {
+    width: 120px;
+    font-weight: lighter;
+}
+
+
+#creations button {
+    display: block;
+    padding: 10px;
+    width: 150px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px auto;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+/* Footer styles  */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    color: var(--white);
+    align-items: center;
+    padding: 50px 5%;
+}
+
+footer #logo img {
+    width: 150px;
+}
+
+footer ul {
+    padding: 20px 0;
+}
+
+footer ul li {
+    list-style: none;
+    padding: 15px;
+    text-align: center;
+}
+
+footer .social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer p {
+    color: var(--very-dark-gray);
+    font-weight: bold;
+}
+
+/* Making all these responsive on larger screens */
+@media screen and (min-width: 900px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 40px 10%;
+    }
+
+    footer .left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .left ul li {
+        text-align: left;
+        display: inline-block;
+    }
+
+    footer .left ul li:is(:first-child) {
+        padding-left: 0;
+    }
+
+    footer .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .social {
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    footer p {
+        padding: 35px 0px;
+    }
+
+    /* Our Creations */
+    #creations {
+        padding: 10px 10% 100px;
+        position: relative;
+    }
+
+    #creations h1 {
+        text-align: left;
+    }
+
+    #creations button {
+        position: absolute;
+        top: -20px;
+        right: 10%;
+    }
+
+    #creations .card-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #creations .card-list .card {
+        flex: 1 1 180px;
+    }
+
+    #creations .card-list .card figure img.desktop {
+        display: inline-block;
+    }
+    
+    #creations .card-list .card figure img.mobile {
+        display: none;
+    }
+
+    /* Interactive section */
+    #interactive {
+        display: flex;
+        flex-direction: row;
+        padding: 100px 10%;
+        position: relative;
+        /* height: 100vh; */
+    }
+
+    #interactive figure {
+        width: 60%;
+    }
+
+    #interactive .write-up {
+        position: absolute;
+        width: 600px;
+        background-color: #fff;
+        bottom: 100px;
+        right: 20%;
+        padding: 80px;
+        text-align: left;
+    }
+
+    #interactive .write-up h1 {
+        font-size: 2.5rem;
+    }
+
+    #interactive figure img.desktop {
+        display: inline-block;
+    }
+
+    #interactive figure img.mobile {
+        display: none;
+    }
+
+    /* Intro section */
+    .intro .statement {
+        width: 40%;
+    }
+
+    .intro .statement h1 {
+        font-size: 4vw;
+    }
+
+    nav ul {
+        position: static;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding: 10px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: var(--white);
+        text-transform: capitalize;
+    }
+
+    nav #menu {
+        display: none;
+    }
+
+    nav ul #close {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    #creations .card-list .card {
+        flex: 1 1 250px;
+    }
+}
